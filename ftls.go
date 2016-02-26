@@ -83,7 +83,7 @@ func NewClientTLSConfig(c *Config) (*tls.Config, error) {
 
 // NewServerTLSConfig constructs a server tls.Conf from the provided ftls Config.
 func NewServerTLSConfig(c *Config) (*tls.Config, error) {
-	tlsConfig := &tls.Config{}
+	tlsConf := &tls.Config{}
 	if c.MutualTLS {
 		caCert, err := ioutil.ReadFile(c.CAFile)
 		if err != nil {
